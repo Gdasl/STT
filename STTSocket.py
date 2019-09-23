@@ -8,9 +8,20 @@ class STTSocket:
         self.s.settimeout(2)
 
     def sendline(self, m):
+        if type(m) != type(""):
+            m = str(m)
         self.s.send(m+'\n')
 
+    def send(self, m):
+        if type(m) != type(""):
+            m = str(m)
+
+        if m[-1] != '\n':
+            m+= '\n'
+        self.s.send(m)
+
     def recv(self,n):
+        data = ""
         try:
             data = self.s.recv(n)
         except Exception as err:
