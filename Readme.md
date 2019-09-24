@@ -8,7 +8,9 @@ At this point the main question that will arise is, why not use [pwntools](https
 
 Now, my motto is Go Big or Go Home. So I decided to build a comprehensive framework for CTFing and general pentesting that covers the most frequent topics: Crypto, Web, Forensics and some misc. I do most of my reversing in IDA/gdb so that category won't be represented much, I think. Additionally I have a general and socket category, the latter to make socket interaction smoother (e.g. I struggled time and again with socket blocking, it would freeze when trying to receive data when none was available), the former aiming to perform helper tasks like transposing arrays, recognizing patterns etc.
 
-I will use this as my MCH (Main Control Hub) for progress and as time progresses, and is permitting, build an orchestrator to bring all partial scripts under one "roof"
+I will use this as my MCH (Main Control Hub) for progress and as time progresses, and is permitting, build an orchestrator to bring all partial scripts under one "roof".
+
+24.9: Rearranged file structure. Now all modules will be organized using "STTxxx.filename" where xxx is the overall structure. Makes it easier to import stuff as well.
 
 
 
@@ -16,15 +18,15 @@ I will use this as my MCH (Main Control Hub) for progress and as time progresses
 
 #### 1. General
 - [ ] Pattern recognition
-  - [x] Base64 --> StringParser
-  - [x] Base32 --> StringParser
-  - [x] Hex --> StringParser
-  - [x] flags --> StringParser
+  - [x] Base64 --> STTUtils.StringParser
+  - [x] Base32 --> STTUtils.StringParser
+  - [x] Hex --> STTUtils.StringParser
+  - [x] flags --> STTUtils.StringParser
   - [ ] Words
 - [ ] Encodings
   - [ ] all bases
   - [ ] rot13
-- [x] Socket --> STTSocket
+- [x] Socket --> STTSocket.STTSocket
   - [x] recvline
   - [x] recvlines
   - [x] recvutil
@@ -39,14 +41,14 @@ I will use this as my MCH (Main Control Hub) for progress and as time progresses
   - [ ] Common modulus
   - [ ] Fault
   - [ ] Coppersmith
-  - [x] General solve
+  - [x] General solve --> STTCrypto.RSASolver
 - [ ] ECC
 - [ ] DES
 - [ ] Common ciphers
   - [ ] Caesar
   - [ ] Railcipher
   - [ ] Vigenere
-
+- [x] Morse --> STTCrypto.morse
 
 
 #### 4. Web
@@ -73,4 +75,5 @@ I will use this as my MCH (Main Control Hub) for progress and as time progresses
 - [ ] Memdumps
   - [ ] Vola
 - [ ] OCR
-- [x] QR --> utils
+- [x] QR --> STTUtils.utils
+- [x] Packing --> STTUtils.packing
