@@ -1,4 +1,4 @@
-from utils import socki
+from STTUtils.utils import socki
 import requests
 
 #One of the ideas was to make this as compatible with pwntools as possible, e.g. when executing code from a teammate that uses it
