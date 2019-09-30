@@ -13,7 +13,7 @@ b16_charset = string.digits + 'abcdef'
 b64_charset = string.ascii_letters + string.digits + '=+/'
 
 class Parser:
-    def __init__(self, filer,minLen = 3, maxLen = 100,flag=None,isFIle=True):
+    def __init__(self, filer,minLen = 3, maxLen = 100,flag=None,isFile=True):
         
         if isFile:
             self.lst=subprocess.check_output(('strings','-n', str(minLen), filer)).split('\r\n')[5:]
