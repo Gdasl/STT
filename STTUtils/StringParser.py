@@ -103,11 +103,4 @@ def isBase16(s):
     except TypeError:
         return False
 
-
-
-def testMe():
-    import os
-    os.chdir('C:\Users\jeanb\Downloads')
-    test = Parser('flagconverter.dmp',minLen=60,flag='ALLES{')
-    return test
     
