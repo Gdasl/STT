@@ -3,9 +3,15 @@ import time
 from PIL import Image
 from pyzbar.pyzbar import decode
 import string
+import itertools
 
 def xor(a,b):
     return ''.join([chr(ord(a[i])^ord(b[i%len(b)])) for i in range(len(a))])
+
+
+def listiCombo(li):
+    #li ist a list of lists
+    return itertools.product(*a)
 
 def socki(adress):
     url = adress.split(' ')[0]

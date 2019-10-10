@@ -11,6 +11,8 @@ Now, my motto is Go Big or Go Home. So I decided to build a comprehensive framew
 I will use this as my MCH (Main Control Hub) for progress and as time progresses, and is permitting, build an orchestrator to bring all partial scripts under one "roof".
 
 24.9: Rearranged file structure. Now all modules will be organized using "STTxxx.filename" where xxx is the overall structure. Makes it easier to import stuff as well.
+6.10: STT now available on [pypy] (https://pypi.org/project/SealTeamTools/)
+10.10: added various features, started working on Web Package
 
 
 
@@ -25,7 +27,7 @@ I will use this as my MCH (Main Control Hub) for progress and as time progresses
   - [ ] Words
 - [ ] Encodings
   - [ ] all bases
-  - [ ] rot13
+  - [x] rot13 --> STTUtils.encodings
 - [x] Socket --> STTSocket.STTSocket
   - [x] recvline
   - [x] recvlines
@@ -41,7 +43,9 @@ I will use this as my MCH (Main Control Hub) for progress and as time progresses
   - [ ] Common modulus
   - [ ] Fault
   - [ ] Coppersmith
-  - [x] General solve --> STTCrypto.RSASolver
+  - [x] General solve --> STTCrypto.STTRSA.RSASolver (Accesible through STTCrypto.STTRSA.Orchestrator)
+  - [x] Multi-primes --> STTCrypto.STTRSA.multiPrime (Accesible through STTCrypto.STTRSA.Orchestrator)
+  - [x] Wiener --> STTCrypto.STTRSA.wienNerhacker (Accesible through STTCrypto.STTRSA.Orchestrator)
 - [ ] ECC
 - [ ] DES
 - [ ] Common ciphers
@@ -57,6 +61,7 @@ I will use this as my MCH (Main Control Hub) for progress and as time progresses
   - [ ] Handlebar
 - [ ] XSS
 - [ ] WAF Bypass
+- [x] LFI --> --> STTWeb.LFITester
 
 #### 5. Forensics
 - [ ] Images
