@@ -10,8 +10,12 @@ Now, my motto is Go Big or Go Home. So I decided to build a comprehensive framew
 
 I will use this as my MCH (Main Control Hub) for progress and as time progresses, and is permitting, build an orchestrator to bring all partial scripts under one "roof".
 
+
+### Changelog
 24.9: Rearranged file structure. Now all modules will be organized using "STTxxx.filename" where xxx is the overall structure. Makes it easier to import stuff as well.
+
 6.10: STT now available on [pypy] (https://pypi.org/project/SealTeamTools/)
+
 10.10: added various features, started working on Web Package
 
 
